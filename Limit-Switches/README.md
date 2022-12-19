@@ -17,7 +17,12 @@ motor controller, with no need to write our own code.
 
 A limit switch looks like this:
 
-![Image of a limit switch](./LimitSwitch.jpg)
+![Image of a limit switch](./LimitSwitch-PartNum.jpg)
+
+The long metal bar triggers the switch.  This makes it easy to trigger the
+switch by having a robot component bump into it.  (We want to be sure that the
+switch doesn't get bumped with so much energy that the switch breaks, of
+course!)
 
 # How do limit switches work?
 
@@ -53,9 +58,11 @@ Since a limit switch is a 1-pole 2-throw switch, we can use it to choose
 which of 2 signals will go to our roboRIO.  We'll use one signal to indicate
 that the switch is *not* active, and the other signal to indicate that it
 *is* active.  Since this is a digital signal, we'll use a logical 1 (+5V or
-+3.3V) for one signal, and a logical 0 (0V) for the other.  We can use them
-either way around (as long as the electrical team and programming team
-agree on which means what!).
++3.3V) for one signal, and a logical 0 (0V) for the other.  We could choose
+either way -- a logical 1 could mean either "we're NOT at the limit" or
+"we ARE at the limit" -- as long as the electrical team and programming team
+agree on which means what!  However, choosing a logical 1 to mean "we're NOT
+at the limit" saves a little power.
 
 
 # How do I wire a limit switch?
@@ -64,8 +71,12 @@ Since a limit switch is a momentary 2-throw switch, it has three contacts
 labeled "C" (or "COM") for "common", "NO" for "normally open", and "NC"
 for "normally closed".  We're going to wire our limit switch like this:
 
-![Limit switch wiring](./LimitSwitchWiring.jpg)
+![Limit switch wiring](./LimitSwitch-Terminals.jpg)
 
+The signal wire connects the common terminal of the switch to the Signal input
+of whichever roboRIO Digital I/O you choose.  The ground wire connects the
+ground pin of that Digital I/O to the normally-open contact of the switch.
+_*The normally-closed contact of the switch remains unconnected.*_
 This is equivalent to the following circuit diagram:
 
 ![Limit switch wiring circuit diagram](./LimitSwitchCircuitDiagram1.jpg)
@@ -88,9 +99,15 @@ actual circuit diagram looks like this:
 
 ![Limit switch wiring circuit diagram](./LimitSwitchCircuitDiagram2.jpg)
 
+(Note the pull-up resistor in purple, internal to the roboRIO.)
 There is no complete circuit, so current doesn't flow, but the power supply
-"pulls up" the voltage on the digital input to a logical 1.  (In spite of
-its name, the pull-up resistor isn't responsible for pulling up the voltage.
-Its job is to limit the current to a reasonable amount when the pin is
-connected to ground.)
+"pulls up" the voltage on the "Signal" digital input to a logical 1.  (In
+spite of its name, the pull-up resistor isn't responsible for pulling up the
+voltage.  Its job is to limit the current to a reasonable amount when the pin
+is connected to ground.)
 
+# What are part numbers for limit switches we use?
+
+We've qualified the following limit switches:
+
+* Honeywell V7-2B17D8-048 [[data sheet](https://www.alliedelec.com/m/d/b4e08726bf294639cfd9b226c34e8f08.pdf)] [[vendor link](https://www.alliedelec.com/product/honeywell/v7-2b17d8-048/70120164/)]
