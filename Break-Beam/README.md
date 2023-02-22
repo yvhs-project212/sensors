@@ -10,7 +10,7 @@ can use this to detect whether a linear path ("beam") is blocked or obscured
 
 # What does a break-beam sensor look like?
 
-Here's one type of break-beam that we use:
+Here's one type of break-beam sensor that we use:
 
 ![Image of a break-beam sensor](./break-beam-pair.jpg)
 
@@ -49,8 +49,8 @@ Not very carefully.  If they're aligned by eye, that's almost certainly good
 enough over the distances involved in a robot chassis.  This type of sensor
 can be aligned over garage-door distances without special tools, after all.
 
-# What are part numbers for ultrasonic sensors we use?
+# What are part numbers for break-beam sensors we use?
 
-We've qualified the following ultrasonic sensors:
+We've qualified the following break-beam sensors:
 
 * Adafruit 3mm LED break-beam sensor [[specs](https://www.adafruit.com/product/2167)] [[vendor link](https://www.amazon.com/dp/B01BU6YBWU)]
