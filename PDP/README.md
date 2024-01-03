@@ -25,3 +25,8 @@ power usage, either total or by channel, as part of our periodic functions,
 and note when power usage spikes.  This could help us figure out what we're
 doing to cause that, and therefore help avoid brownouts.
 
+(Of course, a more reliable way to avoid brownouts is to tell the motor
+controllers to limit the amount of current that their motors are allowed to
+draw.  This can be done either by configuring them using tools like Phoenix
+Tuner or the REV Hardware Configuration Tool, or in software by using methods
+of the motor controllers to set current limits.)
