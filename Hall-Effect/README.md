@@ -9,8 +9,8 @@ very close.  Hall-effect sensors can be used to detect a nearby moving part
 
 Here's one type of Hall-effect sensor that we use:
 
-![Image of a Hall-effect sensor](./Hall-effect-front.jpg)
-![Image of a Hall-effect sensor](./Hall-effect-back.jpg)
+![Image of a Hall-effect sensor](./Hall-effect-sensor-front.jpg)
+![Image of a Hall-effect sensor](./Hall-effect-sensor-back.jpg)
 
 This sensor is very small -- even mounted to the circuit board, its maximum
 dimensions are 0.75" by 1.25".
